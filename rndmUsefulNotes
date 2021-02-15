@@ -1,0 +1,5 @@
+
+To access files on computer:
+from windows home search:
+\\wsl$
+from terminal: explorer.exe .
