@@ -1,0 +1,7 @@
+let readline = require("readline-sync");
+
+function prompt(question) {
+  console.log(`=> ${question}`);
+}
+
+let answer = readline.question().toLowerCase();
