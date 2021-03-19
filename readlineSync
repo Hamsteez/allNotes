@@ -5,3 +5,5 @@ function prompt(question) {
 }
 
 let answer = readline.question().toLowerCase();
+
+let name = readline.question("What is your name?\n");
