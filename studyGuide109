@@ -1,0 +1,152 @@
+- declarations, initialization, assignment, and re-assignment
+  Declaration: 
+    is when you reserve space for a variable with a certain name. you can use let or var
+    initialization is when you first create the variable in js and assign it some value.
+    if there is no specified value for the variable then it is initialized to undefined.
+    then you can assign it and reassign it different values.
+    const are declared and initialized the same way as let and var but need an initial value at declaration.
+    const are immutable, meaning you cannot assign it a new value once it is declared, must have a value at declaration
+
+- variable scope, especially how variables interact with function definitions and blocks
+  Variable scope:
+    2 types: local and global
+    the place where a variable is declared is the scope of that variable.
+    let and const have block scope.
+    blocks are locations between a set of {}.
+    function bodies are also considered to be blocks.
+    var keyword does not use block scoping.
+
+- primitive values, objects, and type coercions
+  Primitive values:
+    String, Number, undefined, Null, Boolean
+  Objects:
+  Everything else other than primitive values are of object types
+  Type coercions:
+    type coercion is when you take one value type and convert it to another.
+    Explicit:
+      You choose what you want to coerce and how
+    Implicit:
+      Let the engine choose
+
+- object properties
+  dot notation, brackets
+
+- mutability vs. immutability vs. const
+  all primitive values are immutable
+  objects are usually mutable
+  const are immutable
+
+- loose and strict equality
+  strict equality operator returns true when operands have same type and value, false otherwise: ===
+  loose equality operator is similar to the strict but when it compares values of different types, it coerces one of the values type
+    to the other operands type before it compares it to each other.
+
+- passing arguments into and return values out of functions
+  parameters and arguments:
+    stuff between parenthesis after the function name are called parameters, the stuff that we send into the function, or pass it
+    into the function are called arguments. arguments are basically the actual value of the parameter and the parameter is just the
+    name that are locally available to that function.
+    functions can have default parameters, that is when a function is called but no argument was passed into it so the function
+    uses the default parameter assigned between the parenthesis.
+  return values:
+    the implicit return value of a function is undefined but we can explicitly return a value by using a return statement.
+    all functions return something even if not explicitly stated.
+    the caller is the code that called the function. the caller will have a value returned to it by the function.
+    functions that return boolean values are called predicates.
+    
+- working with Strings
+  check
+
+- working with Arrays, especially the iteration methods (forEach, map, filter, and find)
+  arrays are ordered list of elements.
+  forEach has a callback function and always returns undefined.
+    callback functions are functions that are passed to another function as an argument.
+  map is used when you iterate thru an array and want to do something to every element of that array without actually changing it.
+  map returns a new array of the same length as the original array.
+  filter iterates thru an array and returns a new array with all the values that the callback returned true.
+  find iterates thru an array and returns the first value that the callback function returned true on.
+
+- working with Objects; accessing keys and values of an Object as arrays
+  Object.keys method returns an array of all the objects keys.
+  When you get an array from Object.keys, if there are any unset values and you take the length of that array from the object
+    keys method then it will not count those elements and return 0.
+    Example: unset values in arr: let a = []; a.length = 3; a = [ <3 empty items> ]; let aKeys = Object.keys(a);
+    > a.length = 3
+    > aKeys.length = 0;
+
+- arrays are objects
+  check
+
+- understand the concepts of pass-by-reference and pass-by-value
+  value: when you pass a variable into an argument of a function and the function doesnt do anything to the original value of that
+    variable.
+  reference: when the function changes the original value, like when a method or function mutates the caller.
+    when an operation within the function mutates its argument, it affects the original object.
+  primitive values are treated as pass by values. No operation performed on a primitive value can permanantly alter the value.
+  objects exhibit both pass by reference and pass by value.
+
+- variables as pointers
+  variables with primitive values store those values at the memory location that is associated with the variable. Each variable has
+    its own memory location.
+  when it comes to objects, they point to a location which then points to another location.
+
+- console.log vs. return
+  log is a function that takes an argument and prints that arguemnt to the screen, it always returns undefined.
+  return, returns a value and can be used throughout the program
+
+- truthiness vs. boolean
+  booleans: true and false
+    short circuit operators: Both && and || can be short circuited depending on the expressions provided.
+      short circuit occurs when js stops reading the rest of the expression when it can figure out what the final value will be.
+      && short circuits when it finds out that the expression cant be true, so basically when any false value is found
+      || short circuits when it finds out that the expression cant be false, so when it finds any true value
+      short circuit can be dangerous but also has many helpful features such as when you need to check if something is first true
+      then do x thing.
+  truthiness:
+    Values evaluated as false: 
+      false, undefined, null, 0, ""(empty string), NaN
+    everything else is considered as truthy
+
+- function definition and invocation
+  function definition is everything after the function name to the closing bracket }. This includes the paramters and everything
+  between {}.
+  invoking a function simply means to call that function.
+
+
+- function declarations, function expressions, and arrow functions
+  function declaration is the regular way you create a function. You can call on function declarations before you declare it.
+  function expression is when you save a function to a variable. You cannot call a function expression before it has been expressed.
+    Any function definition that doesnt have the word function in the beginning is a function expression.
+  arrow functions dont need a return statement when the body of the function contains only a single expression. When there is more
+    than one expression, then you need to explicitly state a return value.
+
+- implicit return value of function invocations
+  all js function calls have a return value whether it be implicit or explicit.
+  implicit return values are undefined.
+  The only time a function doesnt return something is when they raise an exception.
+
+- first-class functions
+  js functions are first class functions; first class functions key feature is that you can treat it like any other value.
+  all js functions are objects. Therefore you can assign them to variables, use them as arguments in other functions, and return 
+    them from function calls.
+- side-effects
+  side effects is anything that a function does other than the return value.
+- naming conventions (legal vs idiomatic)
+  check
+- be able to explain what a function does without talking about its implementation; that is, document a function's use and purpose.
+  basically be able to explain from a macro level and not dive into all the little details within the function.
+  implementation level description is when you dive deep in explanation
+  user level description/other developers/documentation purposes is the macro explanation. This macro explanation should be good
+    enough so that if someone reads it, they can use the function comfortably without having to worry about 'how' it does it. Just 
+    need to know 'what' it does.
+
+- variables are:
+  Variables declared with let or const
+  Function parameters
+  Function names
+Note in particular that object property names are not variables.
+
+Parameters are the names assigned to a function's arguments; arguments are the values that get passed to the function.
+Variables are not passed to or returned by functions: values or references are passed.
+
+
