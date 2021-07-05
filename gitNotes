@@ -29,10 +29,10 @@ git push -u origin main
 
 when making new git repo:
 git init
-git remote add origin git@github.com:Hamsteez/'.....'.git
 git add . //need to have files to push to github
 git commit -m '...'
 git branch -M main
+git remote add origin git@github.com:Hamsteez/'.....'.git
 git push -u origin main
 
 need only this after:

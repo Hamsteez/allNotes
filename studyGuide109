@@ -150,3 +150,22 @@ Parameters are the names assigned to a function's arguments; arguments are the v
 Variables are not passed to or returned by functions: values or references are passed.
 
 
+let greeting = 'Hello';
+
+while (true) {
+  greeting = 'Hi';
+  break;
+}
+
+console.log(greeting);
+
+D) The global variable greeting is declared and initialized to the string 'Hello' on line 1. Lines 3 to 6 define a loop that will 
+execute forever, unless something happens to end the loop. When the loop begins, it first reassigns the greeting global variable to 
+'Hi' on line 4. The next line, break, causes the loop to end, with execution resuming after line 6. Finally, on line 8, console.log 
+is called with the value of the variable greeting passed to it as an argument. Since greeting is now assigned to 'Hi', that is what 
+gets output. This example demonstrates variable scoping rules in JavaScript; specifically the fact that a variable declared in the 
+outer scope is accessible from a nested inner scope.
+
+```javascript
+wefwefwef
+```
