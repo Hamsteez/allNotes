@@ -1,33 +1,9 @@
 Git notes:
 
-- git init //create git repo
 - git status //check status of file
-- git add 'file'
-- git commit -m 'message about code'
 - git log //commit history
-- create repo on gitHub
-- git remote add origin git@github.com:Hamsteez/JS_Prep_Notes.git
-- git branch -M main
-- git push -u origin main 
 
-
-New repo:
-…or create a new repository on the command line
-echo "# JS_BOOK" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:Hamsteez/JS_BOOK.git
-git push -u origin main
-
-push existing repo:
-…or push an existing repository from the command line
-git remote add origin git@github.com:Hamsteez/JS_BOOK.git
-git branch -M main
-git push -u origin main
-
-when making new git repo:
+when making new git repo: (Make on GitHub first)
 git init
 git add . //need to have files to push to github
 git commit -m '...'
@@ -39,3 +15,9 @@ need only this after:
 git add .
 git commit -m '....'
 git push -u origin main
+
+to quicken process in package.json file --> scripts --> 
+  "gitAdd": "git add .",
+  "gitCommit": "git commit -m 'auto pushed'",
+  "gitPush": "git push -u origin main",
+  "git": "npm run gitAdd && npm run gitCommit && npm run gitPush"
